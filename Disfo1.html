@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .scroll{
+        height: 400px;
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-8">
+          <div class="row">
+            <div class="col-8">
+              <br> <p style="font-size: 45px;" class="fw-bold text-primary">STASIUN JUANDA</p>
+            </div>
+            <div class="col-4">
+              <br>
+              <br>
+              <span class="badge rounded-pill text-bg-primary" style="font-size: large;">BOO</span>
+              <span class="badge rounded-pill text-bg-warning" style="font-size: large;">JAKK</span>
+              <span class="badge rounded-pill text-bg-success" style="font-size: large;">D1/1323A</span>
+              <span class="badge rounded-pill text-bg-danger" style="font-size: large;">1316</span>
+              <span class="badge rounded-pill text-bg-info" style="font-size: large;">1327</span>
+            </div>
+          </div>
+          <br>
+          <div class="scroll">
+            <table class="table">
+              <thead>
+                <tr style="font-size: x-large;">
+                  <th scope="col">Rute</th>
+                  <th scope="col">Tujuan</th>
+                  <th scope="col">No. Kereta</th>
+                  <th scope="col">Estimasi</th>
+                </tr>
+              </thead>
+              <tbody style="font-size: x-large ;">
+                <tr class="text-primary">
+                  <th scope="row"><span class="badge rounded-pill text-bg-primary">BOO</span></th>
+                  <td class="text-primary fw-bold">JAKARTA KOTA</td>
+                  <td class="text-primary fw-bold">1119</td>
+                  <td class="text-primary fw-bold">08:35</td>
+                </tr>
+                <tr class="text-primary">
+                  <th scope="row"><span class="badge rounded-pill text-bg-warning">JAKK</span></th>
+                  <td class="text-primary fw-bold">BOGOR</td>
+                  <td class="text-primary fw-bold">1106</td>
+                  <td class="text-primary fw-bold">08:38</td>
+                </tr>
+                <tr class="text-primary">
+                  <th scope="row"><span class="badge rounded-pill text-bg-primary">BOO</span></th>
+                  <td class="text-primary fw-bold">JAKARTA KOTA</td>
+                  <td class="text-primary fw-bold">1121</td>
+                  <td class="text-primary fw-bold">08:39</td>
+                </tr>
+                <tr class="text-primary">
+                  <th scope="row"><span class="badge rounded-pill text-bg-warning">JAKK</span></th>
+                  <td class="text-primary fw-bold">BOGOR</td>
+                  <td class="text-primary fw-bold">1108</td>
+                  <td class="text-primary fw-bold">08:41</td>
+                </tr>
+                <tr class="text-primary">
+                  <th scope="row"><span class="badge rounded-pill text-bg-warning">JAKK</span></th>
+                  <td class="text-primary fw-bold">BOGOR</td>
+                  <td class="text-primary fw-bold">1310A</td>
+                  <td class="text-primary fw-bold">08:43</td>
+                </tr>
+                <tr class="text-primary">
+                  <th scope="row"><span class="badge rounded-pill text-bg-warning">JAKK</span></th>
+                  <td class="text-primary fw-bold">BOGOR</td>
+                  <td class="text-primary fw-bold">1310A</td>
+                  <td class="text-primary fw-bold">17:22</td>
+                </tr>
+                <tr class="text-primary">
+                  <th scope="row"><span class="badge rounded-pill text-bg-warning">JAKK</span></th>
+                  <td class="text-primary fw-bold">BOGOR</td>
+                  <td class="text-primary fw-bold">1312</td>
+                  <td class="text-primary fw-bold">17:27</td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="badge rounded-pill text-bg-primary">BOO</span></th>
+                  <td class="text-primary fw-bold">JAKARTA KOTA</td>
+                  <td class="text-primary fw-bold">1327</td>
+                  <td class="text-primary fw-bold">17:48</td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="badge rounded-pill text-bg-primary">BOO</span></th>
+                  <td class="text-primary fw-bold">JAKARTA KOTA</td>
+                  <td class="text-primary fw-bold">1329</td>
+                  <td class="text-primary fw-bold">17:48</td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="badge rounded-pill text-bg-primary">BOO</span></th>
+                  <td class="text-primary fw-bold">JAKARTA KOTA</td>
+                  <td class="text-primary fw-bold">1331</td>
+                  <td class="text-primary fw-bold">17:51</td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="badge rounded-pill text-bg-primary">BOO</span></th>
+                  <td class="text-primary fw-bold">JAKARTA KOTA</td>
+                  <td class="text-primary fw-bold">1333</td>
+                  <td class="text-primary fw-bold">17:54</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-4">
+          <br> <img class="mx-auto d-block" src="kci2.png" alt="Logo Kereta Commuter" width="300"> <br>
+          <div class="text-center">
+            <p style="font-size: large;" class="bg-primary"><span id="tanggalwaktu"></span></p>
+            <script>
+                var tw = new Date();
+                if (tw.getTimezoneOffset() == 0) (a=tw.getTime() + ( 7 *60*60*1000))
+                else (a=tw.getTime());
+                tw.setTime(a);
+                var tahun= tw.getFullYear ();
+                var hari= tw.getDay ();
+                var bulan= tw.getMonth ();
+                var tanggal= tw.getDate ();
+                var hariarray=new Array("Minggu,","Senin,","Selasa,","Rabu,","Kamis,","Jum'at,","Sabtu,");
+                var bulanarray=new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","Nopember","Desember");
+                document.getElementById("tanggalwaktu").innerHTML = ((tw.getHours() < 10) ? "0" : "") + tw.getHours() + ":" + ((tw.getMinutes() < 10)? "0" : "") + tw.getMinutes() + (" W.I.B ") + ('|') + hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun;
+            </script>
+            <table class="table">
+              <thead style="font-size: larger;">
+                <tr>
+                  <th scope="col">Rute Yang Di Layani:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th style="font-size: larger;"> BOGOR</th>
+                </tr>
+                <tr>
+                  <th style="font-size: larger;">JAKARTA KOTA</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="warna">
+			<h3><marquee direction="left" scrollamount="10" style="color:black; font-weight: bold;">DAN LAYANAN AMARI BEROPERASI PADA 22.00-05.00 WIB SESUAI SK KADISHUB NO 003 TH 2022</marquee></h3>
+    </div>
+
+    <style>
+      body{
+          background-image: url(./krl.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-attachment: fixed;
+          height: 100%;
+      }
+    </style>
+
+  </body>
+
+</html>
